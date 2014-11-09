@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mercedes.hubs" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Hubs</name>
+    <description>
+        Taxis hélicoptère haut de gamme
+    </description>
+    <author email="romain.quilliot-bergue@hetic.net" href="http://cordova.io">
+        Mercedes Hubs
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="HideKeyboardFormAccessoryBar" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="FadeSplashScreen" value="true"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+</widget>
