@@ -1,0 +1,29 @@
+.btn {
+    border: 0;
+    font-size: 15px;
+    color: white;
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    text-transform: uppercase;
+    
+
+    &.btn-home {
+        height: 60px;
+        width: 100%;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+
+        &.login {
+            background: #38aeea;
+            bottom: 0;
+        }
+
+        &.signup {
+            background: #b8c5c2;
+            bottom: 60px;
+        }
+    }
+}

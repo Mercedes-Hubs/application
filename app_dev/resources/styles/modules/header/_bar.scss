@@ -1,0 +1,54 @@
+.header-bar {
+    background: $header-bar-background;
+    width: 100%;
+    position: fixed;
+    height: 65px;
+    border-bottom: solid 1px $header-bar-border;
+    color: $header-bar-textcolor;
+    padding-top: 20px;
+    font-family: $header-bar-font;
+
+    .header-bar-title {
+        margin: 0;
+        padding: 0;
+        padding-top: 12px;
+        text-align: center;
+        font-size: $header-bar-title-size;
+    }
+
+    .header-bar-logo {
+        color: $header-bar-logo-textcolor;
+        font-weight: bold;
+        padding-top: 9px;
+        font-size: $header-bar-logo-size;
+
+        span {
+            font-weight: normal;
+        }
+    }
+
+    .header-bar-button-left {
+        left: 15px;
+    }
+
+    .header-bar-button-right {
+        right: 15px;
+    }
+
+    .header-bar-button-right-search {
+        right: 20px;
+
+        .header-bar-button {
+            font-size: 25px;
+        }
+    }
+
+    .header-bar-button {
+        color: $header-bar-button-color;
+        position: absolute;
+        margin-top: 7px;
+        width: 20px;
+        height: 20px;
+        font-size: 30px;
+    }
+}
