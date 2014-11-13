@@ -1,0 +1,40 @@
+[id=segues] {
+
+    .segue {
+        position: fixed;
+        width: 100%;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        height: 100%;
+        z-index: -2;
+        opacity: 0;
+        -webkit-transition-duration: 0.5s;
+    }
+
+    .segue-left {
+        -webkit-transform: translate3D(-50%,0,0);
+    }
+
+    .segue-right {
+        -webkit-transform: translate3D(100%,0,0);
+    }
+
+    .segue-top {
+        -webkit-transform: translate3D(0,-50%,0);
+    }
+
+    .segue-bottom {
+        -webkit-transform: translate3D(0,100%,0);
+    }
+
+    .segue-active {
+        -webkit-transform: translate3D(0,0,0);
+        display: block;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .segue-blur {
+        -webkit-filter: blur(4px);
+    }
+}
