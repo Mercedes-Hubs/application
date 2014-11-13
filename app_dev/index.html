@@ -8,13 +8,40 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header></header>
     
+    <!-- NAV -->
+    <nav>
+
+    </nav>
+
     <!-- CONTENT -->
-    <section id="main-content"></section>
+    <section id="segues">
+
+        <!-- ACCUEIL NON LOGGED -->
+        <section id="home" data-statusbar="false" class="segue segue-left segue-active">
+            <div class="logo"></div>
+
+            <button class="btn btn-home login" id="display-login">Login</button>
+            <button class="btn btn-home signup" id="display-signup">Signup</button>
+        </section>
+
+    </section>
 
     <!-- SCRIPTS -->
-    <script type="text/javascript" src="libraries/app.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- VENDORS -->
+    <script type="text/javascript" src="libraries/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="libraries/vendors/hammer.js"></script>
+    <script type="text/javascript" src="libraries/vendors/handlebars.js"></script>
+    <script type="text/javascript" src="libraries/vendors/fastclick.js"></script>
+    <!-- CLASSES -->
+    <script type="text/javascript" src="libraries/classes/segues.js"></script>
+    <script type="text/javascript" src="libraries/classes/statusbar.js"></script>
+    <!-- ANIMATIONS -->
+    <script type="text/javascript" src="libraries/animations/segues.js"></script>
+    <script type="text/javascript" src="libraries/animations/alerts.js"></script>
+    <script type="text/javascript" src="libraries/animations/login.js"></script>
+    <!-- APP -->
+    <script type="text/javascript" src="libraries/app.js"></script>
 </body>
 </html>
