@@ -3,17 +3,23 @@ module.exports = function(grunt) {
     var javascript = [
         // Vendors
         'app_dev/libraries/vendors/jquery.min.js',
+        'app_dev/libraries/vendors/hammer.js',
+        'app_dev/libraries/vendors/handlebars.js',
+        'app_dev/libraries/vendors/fastclick.js',
         // App
-        'app_dev/libraries/app.js'
+        'app_dev/libraries/app.js',
+        // Classes
+        'app_dev/libraries/classes/segues.js',
+        'app_dev/libraries/classes/statusbar.js',
+        // Animations
+        'app_dev/libraries/animations/segues.js',
+        'app_dev/libraries/animations/alerts.js'
     ];
 
     // On configure les taches
     grunt.initConfig({
         // On concatene les fichiers javascript
         concat: {
-            options: {
-                separator: ';'
-            },
             dev: {
                 src: javascript,
                 dest: 'cordova/www/libraries/app.min.js'
@@ -78,7 +84,7 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: 'app_dev/resources/styles/',
                     cssDir: 'cordova/www/resources/styles/',
-                    raw: 'preferred_syntax = :scss\n'
+                    raw: 'preferred_syntax = :sass\n'
                 }
             }
         },
@@ -104,6 +110,12 @@ module.exports = function(grunt) {
                         cwd: "app_dev/resources/images",
                         src: ['**'],
                         dest: 'cordova/www/resources/images/'
+                    },
+                    {
+                        expand: true,
+                        cwd: "app_dev/libraries",
+                        src: ['**'],
+                        dest: 'cordova/www/libraries/'
                     },
                     {
                         expand: true,
@@ -140,8 +152,8 @@ module.exports = function(grunt) {
     grunt.registerTask('dist', [
         'copy',
         'compass',
-        'concat',
-        'uglify',
+        //'concat',
+        //'uglify',
         'htmlmin',
         'string-replace'
     ]);
