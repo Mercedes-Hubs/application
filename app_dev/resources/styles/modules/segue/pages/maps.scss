@@ -1,0 +1,32 @@
+[id=map],
+[id=map-container] {
+    width: 100%;
+}
+
+
+[id=call-helicopter] {
+    height: 50px;
+    width: 200px;
+    padding-top: 4px;
+    position: absolute;
+    left: calc(50% - 100px);
+    bottom: 15px;
+    background: #2f98de;
+    color: white;
+    display: none;
+}
+
+[id=call-helicopter].active,
+[id=map-loader].active {
+    display: block;
+}
+
+
+[id=map-loader] {
+    position: fixed;
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    top: calc(50% - 25px);
+}
