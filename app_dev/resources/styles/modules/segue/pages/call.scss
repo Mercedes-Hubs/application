@@ -1,0 +1,84 @@
+[id=call-geolocation] {
+    position: absolute;
+    background: url('../images/icons/geolocation.png') no-repeat center;
+    width: 25px;
+    height: 25px;
+    background-size: 20px;
+    right: 10px;
+    top: 24px;
+}
+
+.relative {
+    position: relative;
+}
+
+.form-call {
+    
+    .parcours {
+        height: 165px;
+        width: 3px;
+        position: relative;
+        float: left;
+        margin-right: 15px;
+
+        &:before,
+        &:after {
+            content: "";
+            z-index: 3;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            left: calc(50% - 5px);
+        }
+
+        &:before {
+            background: #484447;
+            top: 0;
+        }
+
+        &:after {
+            background: #007ad5;
+            bottom: 7px;
+        }
+
+        .parcours-barre {
+            &:before {
+                content: "";
+                z-index: 2;
+                height: 155px;
+                width: 3px;
+                position: absolute;
+                top: 0;
+                left: calc(50% - 1.5px);
+                background: #948f95;
+            }
+        }
+    }
+
+    .parcours-gap {
+        height: 60px;
+        width: 100%;
+    }
+
+    input {
+        width: 90% !important;
+    }
+
+    .estimated-price {
+        margin-top: 60px;
+        text-align: center;
+
+        small {
+            text-transform: uppercase;
+            font-size: 13px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 300;
+            color: #868687;
+        }
+    }
+}

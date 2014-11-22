@@ -1,0 +1,33 @@
+<script type="text/javascript" src="libraries/interactions/call.js"></script>
+
+<header class="header-bar">
+    <span data-segue="map" class="header-bar-button header-bar-button-left">
+        <span class="ion-ios7-arrow-back"></span>
+    </span>
+
+    <h3 class="header-bar-title">Appeler un HUBS</h3>
+</header>
+
+<section class="content">
+    <form method="post" class="form form-call">
+        <div class="parcours"><div class="parcours-barre"></div></div>
+
+        <div class="relative">
+            <label for="start">Lieu de rendez-vous</label>
+            <input type="address" id="start" name="start" placeholder="12 rue de Paris 75012">
+            <div id="call-geolocation"></div>
+        </div>
+        
+        <div class="parcours-gap"></div>
+
+        <label for="end">Lieu d'arrivé</label>
+        <input type="address" id="end" name="end" placeholder="15 rue de la république 75015">
+
+        <div class="estimated-price">
+            <small>prix</small>
+            <h1>$ 300</h1>
+        </div>
+        
+        <button class="btn btn-home login" >Valider et appeler</button>
+    </form>
+</section>
