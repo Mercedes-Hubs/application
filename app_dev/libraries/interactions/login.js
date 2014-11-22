@@ -21,9 +21,30 @@ $('#display-login').on('click', function (event) {
     }
 });
 
+// Click sur le login sur la page login
+$('#segues').on('submit', '#login-form', function (event) {
+    event.preventDefault();
+
+    // On ajoute la segue MAP
+    Segue.add({
+        id: 'map',
+        segue: 'right',
+        statusBar: false,
+        template: {
+            url: 'templates/segues/map.html'
+        }
+    });
+
+    setTimeout(function() {
+        Segue.display('map');
+    }, 200);
+});
+
+
 // ---------------------
 // ---------------------
 // ---------------------
+
 
 // Click sur le register sur la page d'accueil
 $('#display-signup').on('click', function (event) {
@@ -70,11 +91,13 @@ $('#segues').on('click', '#signup-step2', function (event) {
     }
 });
 
+
 // ---------------------
 // ---------------------
 // ---------------------
 
-// On verifie la carte pour afficher l'icone
+
+// On verifie la carte de credit pour afficher l'icone
 $('#segues').on('keyup', '#card', function() {
     var card = $(this).val();
 
