@@ -1,0 +1,97 @@
+// Corps de l'helicoptere
+.loading-helico {
+    background: url('../images/loader/logo.png');
+    width: 170px;
+    height: 102px;
+    background-size: 170px 102px;
+    position: absolute;
+    -webkit-transform: translateY(40px);
+    transition-duration: 500ms;
+    left: calc(50% - 85px);
+    top: calc(50% - 81px);
+
+    // Quand l'helico doit voler
+    &.active {
+        -webkit-animation: helico 2s linear infinite;
+        -webkit-transform: translateY(0px);
+    }
+    
+    // Helices
+    &.toit:after,
+    &.toit:before {
+        top: 15px;
+        left: 28%;
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100px;
+        background: #fff;
+    }
+    
+    // Position de la 2eme helice au dessus de la 1ere
+    &.toit:before {
+        top: 14px;
+    }
+
+    // Quand l'helico doit voler les helices tournent
+    &.active.toit:after,
+    &.active.toit:before {
+        height: 8px;
+        -webkit-transform: rotateX(180deg);
+        -webkit-animation: helices 50ms linear infinite;
+    }
+}
+
+[id=loader] {
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%;
+    z-index: 4;
+    display: none;
+}
+
+[id=loader].active {
+    display: block;
+}
+
+
+/****************/
+/** ANIMATIONS **/
+/****************/
+
+// Helicoptere effet de flottement
+@-webkit-keyframes helico {
+    0% {
+        @include transform(translateY(0px));
+        //-webkit-transform: translateY(0px);
+    }
+    25% {
+        -webkit-transform: translateY(10px);
+        //-webkit-transform: translateY(20px);
+    }
+    50% {
+        @include transform(translateY(20px));
+        //-webkit-transform: translateY(30px);
+    }
+    75% {
+        @include transform(translateY(10px));
+        //-webkit-transform: translateY(20px);
+    }
+    100% {
+        @include transform(translateY(0px));
+        //-webkit-transform: translateY(0px);
+    }
+}
+
+// Helices effet de rotation
+@-webkit-keyframes helices {
+    0% {
+        -webkit-transform: rotateX(95deg) rotateZ(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(95deg) rotateZ(360deg);
+    }
+}
