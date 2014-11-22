@@ -6,6 +6,8 @@
 @import 'modules/icons';
 @import 'modules/animations';
 @import 'modules/buttons';
+@import 'modules/navigation';
+@import 'modules/loading';
 
 
 @import 'modules/header/config';
@@ -14,6 +16,8 @@
 @import 'modules/segue/segue';
 @import 'modules/segue/pages/home';
 @import 'modules/segue/pages/login';
+@import 'modules/segue/pages/maps';
+@import 'modules/segue/pages/call';
 
 @import 'modules/alert/alert';
 
