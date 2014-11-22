@@ -1,0 +1,83 @@
+.navicon {
+    background: url('../images/icons/navicon.png');
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 3;
+    display: none;
+}
+
+.navicon.active {
+    display: block;
+}
+
+.navigation {
+    -webkit-transform: translateY(-100%);
+    transition-duration: 200ms;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    
+    .navigation-close {
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        background: url('../images/icons/close.png');
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+
+    .navigation-profil {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        border: solid 1px white;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        margin-top: 70px;
+
+        li {
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 40px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 150px;
+                left: calc(50% - 75px);
+                bottom: 0;
+                background: white;
+            }
+
+            &:last-child:after {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.navigation.active {
+    -webkit-transform: translateY(0);
+}

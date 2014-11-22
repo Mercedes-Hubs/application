@@ -10,8 +10,15 @@
 <body>
     
     <!-- NAV -->
-    <nav>
-
+    <nav class="navigation" id="navigation">
+        <div class="navigation-close" data-action="closeNavigation"></div>
+        <img class="navigation-profil" src="resources/images/user_icon.jpeg">
+        <ul>
+            <li>carte</li>
+            <li>historique</li>
+            <li>paiement</li>
+            <li id="nav-logout">deconnexion</li>
+        </ul>
     </nav>
 
     <!-- CONTENT -->
@@ -34,13 +41,17 @@
     <script type="text/javascript" src="libraries/vendors/hammer.js"></script>
     <script type="text/javascript" src="libraries/vendors/handlebars.js"></script>
     <script type="text/javascript" src="libraries/vendors/fastclick.js"></script>
+    <script type="text/javascript" src="libraries/vendors/googlemap.js"></script>
     <!-- CLASSES -->
     <script type="text/javascript" src="libraries/classes/segues.js"></script>
     <script type="text/javascript" src="libraries/classes/statusbar.js"></script>
+    <script type="text/javascript" src="libraries/classes/watchPosition.js"></script>
     <!-- ANIMATIONS -->
     <script type="text/javascript" src="libraries/animations/segues.js"></script>
     <script type="text/javascript" src="libraries/animations/alerts.js"></script>
-    <script type="text/javascript" src="libraries/animations/login.js"></script>
+    <!-- INTERACTIONS -->
+    <script type="text/javascript" src="libraries/interactions/login.js"></script>
+    <script type="text/javascript" src="libraries/interactions/navigation.js"></script>
     <!-- APP -->
     <script type="text/javascript" src="libraries/app.js"></script>
 </body>
